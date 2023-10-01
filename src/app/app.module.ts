@@ -8,8 +8,6 @@ import { FrontPageComponent } from './modules/front-page/front-page.component';
 import { AboutComponent } from './modules/about/about.component';
 import { ProvidesServicesComponent } from './modules/provides-services/provides-services.component';
 import { PortafolioComponent } from './modules/portafolio/portafolio.component';
-import { TeamComponent } from './modules/team/team.component';
-import { TestimonialsComponent } from './modules/testimonials/testimonials.component';
 import { ContactComponent } from './modules/contact/contact.component';
 import { FooterComponent } from './modules/footer/footer.component';
 
@@ -21,8 +19,6 @@ import { FooterComponent } from './modules/footer/footer.component';
     AboutComponent,
     ProvidesServicesComponent,
     PortafolioComponent,
-    TeamComponent,
-    TestimonialsComponent,
     ContactComponent,
     FooterComponent,
   ],
