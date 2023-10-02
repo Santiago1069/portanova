@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './modules/header/header.component';
 import { FrontPageComponent } from './modules/front-page/front-page.component';
@@ -10,6 +9,10 @@ import { ProvidesServicesComponent } from './modules/provides-services/provides-
 import { PortafolioComponent } from './modules/portafolio/portafolio.component';
 import { ContactComponent } from './modules/contact/contact.component';
 import { FooterComponent } from './modules/footer/footer.component';
+import { ClientsComponent } from './modules/clients/clients.component';
+import { DetailPortafolioComponent } from './modules/detail-portafolio/detail-portafolio.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppService } from './services/app.service';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,14 @@ import { FooterComponent } from './modules/footer/footer.component';
     PortafolioComponent,
     ContactComponent,
     FooterComponent,
+    ClientsComponent,
+    DetailPortafolioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
