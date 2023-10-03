@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './modules/header/header.component';
@@ -13,6 +14,7 @@ import { ClientsComponent } from './modules/clients/clients.component';
 import { DetailPortafolioComponent } from './modules/detail-portafolio/detail-portafolio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './modules/landing-page/landing-page.component';
+import { DirectoryCategoriesComponent } from './modules/directory-categories/directory-categories.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { LandingPageComponent } from './modules/landing-page/landing-page.compon
     ClientsComponent,
     DetailPortafolioComponent,
     LandingPageComponent,
+    DirectoryCategoriesComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

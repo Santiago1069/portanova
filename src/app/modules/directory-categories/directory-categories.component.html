@@ -1,0 +1,32 @@
+<hr>
+<!-- ======= Portfolio Section ======= -->
+<div id="portfolio" class="portfolio-area area-padding fix">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+          <h2>Directorio</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row awesome-project-content portfolio-container">
+
+      <!-- portfolio-item start -->
+      <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item portfolio-item"
+        *ngFor="let categorie of categories">
+        <div class="single-awesome-project">
+          <div class="awesome-img">
+            <img src="assets/img/portfolio/1.jpg" alt="" />
+            <div class="add-actions text-center">
+              <div class="project-dec">
+                <h4>{{categorie.description}}</h4>
+                <button class="btn-get-detail" (click)="navegarAPortafolio(categorie.description)">Ver todos</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
