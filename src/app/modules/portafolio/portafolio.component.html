@@ -12,10 +12,9 @@
       <!-- Start Portfolio -page -->
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <ul id="portfolio-flters">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
+          <li (click)="filteredItems = premises">Todos</li>
+          <li (click)="filterByCategory('Restaurante')">Restaurantes</li>
+          <li (click)="filterByCategory('Papeleria')">Papelerias</li>
         </ul>
       </div>
     </div>
@@ -23,17 +22,16 @@
     <div class="row awesome-project-content portfolio-container">
 
       <!-- portfolio-item start -->
-      <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app portfolio-item">
+      <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app portfolio-item"
+        *ngFor="let facility of filteredItems">
         <div class="single-awesome-project">
           <div class="awesome-img">
             <img src="assets/img/portfolio/1.jpg" alt="" />
             <div class="add-actions text-center">
               <div class="project-dec">
-                <a class="portfolio-lightbox" data-gallery="myGallery">
-                  <h4>Business City</h4>
-                  <span>Web Development</span><br>
-                  <button class="btn-get-detail" (click)="navegarADetalle()">Ir a Detalle</button>
-                </a>
+                <h4>{{facility.name}}</h4>
+                <span>{{facility.businessType}}</span><br>
+                <button class="btn-get-detail" (click)="navegarADetalle(facility.locationNumber)">Ir a Detalle</button>
               </div>
             </div>
           </div>

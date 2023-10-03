@@ -12,7 +12,7 @@ import { FooterComponent } from './modules/footer/footer.component';
 import { ClientsComponent } from './modules/clients/clients.component';
 import { DetailPortafolioComponent } from './modules/detail-portafolio/detail-portafolio.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppService } from './services/app.service';
+import { LandingPageComponent } from './modules/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +26,13 @@ import { AppService } from './services/app.service';
     FooterComponent,
     ClientsComponent,
     DetailPortafolioComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

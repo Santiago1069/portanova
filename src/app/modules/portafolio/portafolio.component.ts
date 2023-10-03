@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppService } from 'src/app/services/app.service';
+import { Facility } from 'src/app/models/Facility';
+import { PortafolioService } from 'src/app/services/portafolio.service';
 
 @Component({
   selector: 'app-portafolio',
@@ -9,14 +10,35 @@ import { AppService } from 'src/app/services/app.service';
 })
 export class PortafolioComponent implements OnInit {
 
-  constructor(private router: Router) {
-   }
+  premises: Array<Facility> = new Array();
 
-  ngOnInit(): void {
+  filteredItems: any[] = [];
+
+  constructor(private router: Router, private portafolioService: PortafolioService) {
   }
 
-  navegarADetalle() {
-    console.log("hola");
+  ngOnInit(): void {
+    this.getPortafolio();
+    this.filteredItems = this.premises;
+  }
+
+  navegarADetalle(id: string) {
+    this.router.navigate(['/detalle/' + id]);
+  }
+
+  getPortafolio() {
+    this.portafolioService.getPremises().subscribe({
+      next: (res) => {
+        this.premises = res
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  }
+
+  filterByCategory(businessType: string) {
+    this.filteredItems = this.premises.filter(item => item.businessType === businessType);
   }
 
 }
