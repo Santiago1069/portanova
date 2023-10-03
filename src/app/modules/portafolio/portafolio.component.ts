@@ -16,6 +16,8 @@ export class PortafolioComponent implements OnInit {
   filteredItems: any[] = [];
   description: string = '';
   search: string = '';
+  showNoResultsMessage: boolean = false;
+
 
   constructor(private router: Router, private portafolioService: PortafolioService, private activatedRoute: ActivatedRoute) {
   }
@@ -38,6 +40,31 @@ export class PortafolioComponent implements OnInit {
         console.log(err);
       }
     })
+  }
+
+
+  onSearch() {
+    this.showNoResultsMessage = true; 
+
+    const filteredItems = this.premises.filter(premise =>
+      this.objectContainsSearchTerm(premise, this.search.toLowerCase())
+    );
+
+    if (filteredItems.length > 0) {
+      this.showNoResultsMessage = false;
+    }
+  }
+
+  objectContainsSearchTerm(obj: any, searchTerm: string): boolean {
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        const value = obj[key];
+        if (typeof value === 'string' && value.toLowerCase().includes(searchTerm)) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
 

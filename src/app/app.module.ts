@@ -15,6 +15,7 @@ import { DetailPortafolioComponent } from './modules/detail-portafolio/detail-po
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './modules/landing-page/landing-page.component';
 import { DirectoryCategoriesComponent } from './modules/directory-categories/directory-categories.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DirectoryCategoriesComponent } from './modules/directory-categories/dir
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
