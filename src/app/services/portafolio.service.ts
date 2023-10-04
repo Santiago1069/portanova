@@ -19,8 +19,8 @@ export class PortafolioService {
   ];
 
   categories: Array<Categories> = [
-    {id: '1', description: 'restaurante'},
-    {id: '2', description: 'papeleria'},
+    {id: '1', description: 'restaurante', image: 'https://www.visitfinland.com/dam/jcr:7c2c8221-ace3-4362-a5b0-8073ee6967e9/Savoy-Interior-7.jpeg'},
+    {id: '2', description: 'papeleria', image: 'assets/img/portfolio/1.jpg'},
   ];
 
   constructor() { }

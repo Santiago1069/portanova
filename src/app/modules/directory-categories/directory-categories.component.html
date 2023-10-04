@@ -10,14 +10,14 @@
       </div>
     </div>
 
-    <div class="row awesome-project-content portfolio-container">
+    <div class="row awesome-project-content portfolio-container align-items-center">
 
       <!-- portfolio-item start -->
       <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item portfolio-item"
         *ngFor="let categorie of categories">
         <div class="single-awesome-project">
           <div class="awesome-img">
-            <img src="assets/img/portfolio/1.jpg" alt="" />
+            <img src="{{categorie.image}}" alt="" />
             <div class="add-actions text-center">
               <div class="project-dec">
                 <h4>{{categorie.description}}</h4>
