@@ -1,6 +1,5 @@
-<hr>
 <!-- ======= Portfolio Section ======= -->
-<div id="portfolio" class="portfolio-area area-padding fix">
+<div id="portfolio" class="portfolio-area area-padding fix" style="background-color: #f9f9f9;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -17,7 +16,7 @@
         *ngFor="let categorie of categories">
         <div class="single-awesome-project">
           <div class="awesome-img">
-            <img src="{{categorie.image}}" alt="" />
+            <img src="{{categorie.image}}" alt="Imagen de la categoria" class="border-img"/>
             <div class="add-actions text-center">
               <div class="project-dec">
                 <h4>{{categorie.description}}</h4>
