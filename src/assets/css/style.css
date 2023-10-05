@@ -1134,16 +1134,12 @@ div#preloader {
 }
 
 .project-dec {
-  display: block;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.project-dec a {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
 
 .project-dec h4 {
   margin-bottom: 5px;
@@ -1156,8 +1152,6 @@ div#preloader {
 .project-dec h4 {
   color: #ddd;
   font-size: 24px;
-  margin-top: -45px;
-  padding-top: 50%;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 800;
@@ -1681,10 +1675,10 @@ div#preloader {
   display: inline-block;
   font-size: 17px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 15px;
   padding: 12px 40px;
   text-align: center;
-  text-transform: uppercase;
+  /*   text-transform: uppercase; */
   transition: all 0.4s ease 0s;
   z-index: 222;
 }
